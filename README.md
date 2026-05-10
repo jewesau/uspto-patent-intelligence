@@ -1,7 +1,7 @@
-# Global Patent Intelligence Data Pipeline
+# USPTO Patent Intelligence Pipeline
 
-## Project Overview
-This project builds a comprehensive data system to collect, clean, store, and analyze real-world patent data from the USPTO PatentsView database. The pipeline demonstrates the complete data engineering workflow from raw data to actionable insights.
+## 🎯 **Project Overview**
+A comprehensive data engineering pipeline for processing real USPTO patent data from the PatentsView database. This project demonstrates complete data intelligence capabilities from raw data extraction to interactive visualization.
 
 ## 🚀 Features
 - **Automated Data Pipeline**: End-to-end processing of patent data

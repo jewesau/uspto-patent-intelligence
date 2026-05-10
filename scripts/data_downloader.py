@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
 """
 Global Patent Intelligence Data Pipeline - Data Downloader
-Downloads patent data from USPTO PatentsView database
+Handles downloading and processing of patent data from USPTO PatentsView and real USPTO files
 """
 
-import requests
 import pandas as pd
-import os
+import requests
+import json
 import time
 from pathlib import Path
-import zipfile
-import json
+import random
+import numpy as np
+from uspto_data_processor import USPTODataProcessor
 
 class PatentDataDownloader:
     def __init__(self, data_dir="../data"):
@@ -59,6 +60,42 @@ class PatentDataDownloader:
                 break
                 
         return all_data
+    
+    def process_real_uspto_data(self):
+        """Process real USPTO data files from lecturer"""
+        print("Processing real USPTO patent data files...")
+        
+        try:
+            processor = USPTODataProcessor(self.data_dir)
+            processed_df = processor.process_uspto_data(sample_size=None)  # Process all data
+            
+            if processed_df is not None:
+                print(f"Successfully processed {len(processed_df)} patent records")
+                return processed_df
+            else:
+                print("Failed to process USPTO data")
+                return None
+                
+        except Exception as e:
+            print(f"Error processing USPTO data: {e}")
+            return None
+    
+    def download_patent_data(self):
+        """Download patent data from USPTO PatentsView API"""
+        print("Downloading patent data from USPTO PatentsView...")
+        
+        try:
+            # First try to process real USPTO data files
+            real_data = self.process_real_uspto_data()
+            if real_data is not None:
+                return real_data
+            
+            # Fallback to API data if real data not available
+            print("Real USPTO data not found, using API data...")
+            return self.download_via_api()
+        except Exception as e:
+            print(f"Data acquisition failed: {e}")
+            return self.create_sample_data()
     
     def create_sample_data(self):
         """
