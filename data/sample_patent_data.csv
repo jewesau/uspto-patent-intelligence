@@ -1,6 +1,6 @@
-patent_number,patent_title,patent_abstract,patent_date,patent_type,inventor_first_name,inventor_last_name,assignee_organization,cpc_subsection,cpc_section,patent_number_cited_by_us_patents
-US1234567,Method for Processing Data Using Machine Learning,A method and system for processing large datasets using advanced machine learning algorithms...,2023-05-15,utility,John,Smith,Tech Innovations Inc.,G,G06F,15
-US1234568,Advanced Battery Technology for Electric Vehicles,An improved battery system for electric vehicles that provides extended range and faster charging...,2023-06-20,utility,Sarah,Johnson,Green Energy Solutions,H,H01M,8
-US1234569,Medical Device for Patient Monitoring,A wearable medical device that continuously monitors vital signs and alerts healthcare providers...,2023-07-10,utility,Michael,Brown,MedTech Corp,A,A61B,12
-US1234570,Artificial Intelligence System for Data Analysis,An AI-powered system for automated analysis of complex datasets and pattern recognition...,2023-08-01,utility,Emily,Davis,AI Research Labs,G,G06N,25
-US1234571,Sustainable Packaging Material,A biodegradable packaging material made from renewable resources that reduces environmental impact...,2023-09-05,utility,Robert,Wilson,EcoPack Solutions,B,B65D,6
+patent_number,patent_title,patent_abstract,patent_date,patent_type,inventor_first_name,inventor_last_name,assignee_organization,cpc_subsection,cpc_section,patent_number_cited_by_us_patents,inventor_country,assignee_country
+US1234567,Method for Processing Data Using Machine Learning,A method and system for processing large datasets using advanced machine learning algorithms...,2023-05-15,utility,John,Smith,Tech Innovations Inc.,G,G06F,15,USA,USA
+US1234568,Advanced Battery Technology for Electric Vehicles,An improved battery system for electric vehicles that provides extended range and faster charging...,2023-06-20,utility,Sarah,Johnson,Green Energy Solutions,H,H01M,8,USA,USA
+US1234569,Medical Device for Patient Monitoring,A wearable medical device that continuously monitors vital signs and alerts healthcare providers...,2023-07-10,utility,Michael,Brown,MedTech Corp,A,A61B,12,USA,USA
+US1234570,Artificial Intelligence System for Data Analysis,An AI-powered system for automated analysis of complex datasets and pattern recognition...,2023-08-01,utility,Emily,Davis,AI Research Labs,G,G06N,25,USA,USA
+US1234571,Sustainable Packaging Material,A biodegradable packaging material made from renewable resources that reduces environmental impact...,2023-09-05,utility,Robert,Wilson,EcoPack Solutions,B,B65D,6,USA,USA

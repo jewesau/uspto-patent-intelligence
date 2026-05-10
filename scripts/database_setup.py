@@ -47,6 +47,8 @@ class PatentDatabase:
                 citation_category TEXT,
                 cpc_section TEXT,
                 cpc_subsection TEXT,
+                inventor_country TEXT,
+                assignee_country TEXT,
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         ''')
@@ -136,15 +138,18 @@ class PatentDatabase:
                     'patent_number_cited_by_us_patents': row.get('patent_number_cited_by_us_patents'),
                     'citation_category': row.get('citation_category'),
                     'cpc_section': row.get('cpc_section'),
-                    'cpc_subsection': row.get('cpc_subsection')
+                    'cpc_subsection': row.get('cpc_subsection'),
+                    'inventor_country': row.get('inventor_country'),
+                    'assignee_country': row.get('assignee_country')
                 }
                 
                 cursor.execute('''
                     INSERT OR REPLACE INTO patents 
                     (patent_number, patent_title, patent_abstract, patent_date, patent_type,
                      patent_date_year, patent_date_month, title_length, abstract_length,
-                     patent_number_cited_by_us_patents, citation_category, cpc_section, cpc_subsection)
-                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                     patent_number_cited_by_us_patents, citation_category, cpc_section, cpc_subsection,
+                     inventor_country, assignee_country)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 ''', tuple(patent_data.values()))
                 
                 patents_inserted += 1

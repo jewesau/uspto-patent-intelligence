@@ -76,7 +76,9 @@ class PatentDataDownloader:
                 "assignee_organization": "Tech Innovations Inc.",
                 "cpc_subsection": "G",
                 "cpc_section": "G06F",
-                "patent_number_cited_by_us_patents": 15
+                "patent_number_cited_by_us_patents": 15,
+                "inventor_country": "USA",
+                "assignee_country": "USA"
             },
             {
                 "patent_number": "US1234568",
@@ -89,7 +91,9 @@ class PatentDataDownloader:
                 "assignee_organization": "Green Energy Solutions",
                 "cpc_subsection": "H",
                 "cpc_section": "H01M",
-                "patent_number_cited_by_us_patents": 8
+                "patent_number_cited_by_us_patents": 8,
+                "inventor_country": "USA",
+                "assignee_country": "USA"
             },
             {
                 "patent_number": "US1234569",
@@ -102,7 +106,9 @@ class PatentDataDownloader:
                 "assignee_organization": "MedTech Corp",
                 "cpc_subsection": "A",
                 "cpc_section": "A61B",
-                "patent_number_cited_by_us_patents": 12
+                "patent_number_cited_by_us_patents": 12,
+                "inventor_country": "USA",
+                "assignee_country": "USA"
             },
             {
                 "patent_number": "US1234570",
@@ -115,7 +121,9 @@ class PatentDataDownloader:
                 "assignee_organization": "AI Research Labs",
                 "cpc_subsection": "G",
                 "cpc_section": "G06N",
-                "patent_number_cited_by_us_patents": 25
+                "patent_number_cited_by_us_patents": 25,
+                "inventor_country": "USA",
+                "assignee_country": "USA"
             },
             {
                 "patent_number": "US1234571",
@@ -128,7 +136,9 @@ class PatentDataDownloader:
                 "assignee_organization": "EcoPack Solutions",
                 "cpc_subsection": "B",
                 "cpc_section": "B65D",
-                "patent_number_cited_by_us_patents": 6
+                "patent_number_cited_by_us_patents": 6,
+                "inventor_country": "USA",
+                "assignee_country": "USA"
             }
         ]
         

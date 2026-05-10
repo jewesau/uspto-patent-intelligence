@@ -18,6 +18,7 @@ from data_cleaner import PatentDataCleaner
 from database_setup import PatentDatabase
 from analysis_queries import PatentAnalyzer
 from report_generator import ReportGenerator
+from course_report_generator import CourseReportGenerator
 
 class PatentIntelligencePipeline:
     def __init__(self, project_dir=None):
@@ -38,6 +39,7 @@ class PatentIntelligencePipeline:
         self.database = PatentDatabase(str(self.database_dir / "patent_intelligence.db"))
         self.analyzer = PatentAnalyzer(str(self.database_dir / "patent_intelligence.db"))
         self.generator = ReportGenerator(str(self.database_dir / "patent_intelligence.db"), str(self.reports_dir))
+        self.course_generator = CourseReportGenerator(str(self.database_dir / "patent_intelligence.db"), str(self.reports_dir))
         
     def run_full_pipeline(self):
         """Run the complete patent intelligence pipeline"""
@@ -93,7 +95,13 @@ class PatentIntelligencePipeline:
             print("STEP 5: REPORT GENERATION")
             print("-" * 40)
             self.generator.generate_all_reports()
-            print("[OK] Report generation completed")
+            print("[OK] Standard reports completed")
+            
+            # Step 6: Generate Course-Required Reports
+            print("STEP 6: COURSE REPORT GENERATION")
+            print("-" * 40)
+            self.course_generator.generate_all_reports()
+            print("[OK] Course reports completed")
             print()
             
             # Final Summary
